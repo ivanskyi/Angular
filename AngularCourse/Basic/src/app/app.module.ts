@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CommentComponent } from './comment/comment.component';
 import { PostComponent } from './post/post.component';
 import { ProfileComponent } from './profile/profile.component';
 
@@ -9,7 +10,8 @@ import { ProfileComponent } from './profile/profile.component';
   declarations: [
     AppComponent,
     PostComponent,
-    ProfileComponent
+    ProfileComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule
