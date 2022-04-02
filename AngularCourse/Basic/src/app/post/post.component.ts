@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-post',
@@ -12,8 +13,16 @@ export class PostComponent {
   constructor() {
   }
 
-  onInput(event: any) {
+  onInput(event: KeyboardEvent) {
     console.log('Event', event)
-    this.inputValue = event.target.value
+    this.inputValue = (<HTMLInputElement>event.target).value
+  }
+
+  onClick() {
+    console.log("Click!")
+  }
+
+  onBlur(str: string) {
+    this.inputValue = str
   }
 }
