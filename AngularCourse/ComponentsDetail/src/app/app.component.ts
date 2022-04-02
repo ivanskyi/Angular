@@ -17,4 +17,9 @@ export class AppComponent {
     { title: 'I have', text: 'I have a dog', id: 2 },
     { title: 'I am', text: 'I am Ukrainian', id: 3 }
   ]
+
+  updatePosts(post: Post) {
+    this.posts.unshift(post)
+    console.log('Post', post)
+  }
 }
