@@ -6,4 +6,13 @@
     <p>North America</p>
 </ng-template>
 <button (click)="isUkraine = !isUkraine">Change country</button>
+
+<hr>
+<div [ngSwitch]="isOnline">
+    <p *ngSwitchCase="true">Online</p>
+    <p *ngSwitchCase="false">Offline</p>
+    <p *ngSwitchDefault>Unknown status</p>
+</div>
+
+<button (click)="isOnline = !isOnline">Change online status</button>
 <hr>
