@@ -13,6 +13,7 @@
     <p *ngSwitchCase="false">Offline</p>
     <p *ngSwitchDefault>Unknown status</p>
 </div>
-
 <button (click)="isOnline = !isOnline">Change online status</button>
+<p>Current date: {{now | date}}</p>
+<p>Current date in long format: {{now | date: 'long'}}</p>
 <hr>
