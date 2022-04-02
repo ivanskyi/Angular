@@ -3,3 +3,10 @@
 <input type="text" (keyup)="onInput($event)" (blur)="onBlur(myInput.value)" #myInput>
 <p><strong>{{inputValue}}</strong></p>
 <button (click)="onClick()"> Click me!</button>
+
+
+<ul> Fibonacci's numbers
+    <li *ngFor="let number of numbers; let idx = index">
+        {{idx + 1}} <strong> {{number}} </strong>
+    </li>
+</ul>

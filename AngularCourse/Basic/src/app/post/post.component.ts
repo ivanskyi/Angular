@@ -10,6 +10,8 @@ import { throwError } from 'rxjs';
 export class PostComponent {
 
   inputValue = ''
+  numbers = [1, 1, 2, 3, 5, 8, 13]
+
   constructor() {
   }
 
