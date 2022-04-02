@@ -1,0 +1,9 @@
+<p *ngIf="isUkraine">Ukraine</p>
+<p *ngIf="!isUkraine">USA</p>
+
+<p *ngIf="isUkraine; else USALocation">Eastern Europe</p>
+<ng-template #USALocation>
+    <p>North America</p>
+</ng-template>
+<button (click)="isUkraine = !isUkraine">Change country</button>
+<hr>
