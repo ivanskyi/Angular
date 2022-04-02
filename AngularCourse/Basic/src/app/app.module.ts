@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { CommentComponent } from './comment/comment.component';
 import { PostComponent } from './post/post.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     ProfileComponent,
-    CommentComponent
+    CommentComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

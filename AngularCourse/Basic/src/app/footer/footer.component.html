@@ -1,0 +1,12 @@
+<hr>
+<button (click)="backgroundToggle = !backgroundToggle">Change color in square</button>
+
+<div [ngStyle]="{
+    width: '200px',
+    height: '200px',
+    borderRadius: '5px',
+    border:'1px solid #ccc',
+    background: backgroundToggle ? 'red' : 'blue'
+}">
+
+</div>
