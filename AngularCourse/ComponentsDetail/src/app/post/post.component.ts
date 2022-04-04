@@ -1,3 +1,4 @@
+import { ChangeDetectionStrategy } from '@angular/core';
 import { OnChanges, SimpleChanges } from '@angular/core';
 import { AfterContentInit } from '@angular/core';
 import { AfterViewInit } from '@angular/core';
@@ -13,7 +14,8 @@ import { Post } from '../app.component';
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  styleUrls: ['./post.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class PostComponent implements
