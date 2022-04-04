@@ -1,5 +1,6 @@
 <div class="container">
   <h1>App</h1>
+  <h2>Create new post</h2>
   <app-post-form (onAdd)="updatePosts($event)"></app-post-form>
   <hr>
   <app-post *ngFor="let p of posts" [myPost]="p" (onRemove)="removePost($event)">

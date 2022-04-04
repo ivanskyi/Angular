@@ -1,3 +1,4 @@
+import { ViewEncapsulation } from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { OnChanges, SimpleChanges } from '@angular/core';
 import { AfterContentInit } from '@angular/core';
@@ -15,7 +16,8 @@ import { Post } from '../app.component';
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None
 })
 
 export class PostComponent implements

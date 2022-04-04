@@ -14,8 +14,8 @@ export interface Post {
 })
 export class AppComponent implements OnInit{
   posts: Post[] = [
-    // { title: 'I want', text: 'I want learn Angular', id: 1 },
-    // { title: 'I have', text: 'I have a dog', id: 2 },
+    { title: 'I want', text: 'I want learn Angular', id: 1 },
+    { title: 'I have', text: 'I have a dog', id: 2 },
     { title: 'I am', text: 'I am Ukrainian', id: 3 }
   ]
 
