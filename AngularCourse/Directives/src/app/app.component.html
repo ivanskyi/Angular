@@ -2,4 +2,12 @@
   <h1>Directives</h1>
   <p appStyle="pink" [dStyles]="{border: '1px solid blue', borderRadius: '5px'}">My text</p>
   <p appStyle="pink" [dStyles]="{border: '5px solid green', borderRadius: '15px'}">Text from outside </p>
+
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+  <div *ngIf="isVisible" class="wrap">
+    <p>Subject</p>
+  </div>
+  <div class="wrap" *appIfnot="!isVisible">
+    <p>Description</p>
+  </div>
 </div>
