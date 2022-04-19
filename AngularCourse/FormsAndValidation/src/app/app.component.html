@@ -5,21 +5,31 @@
     <div class="form-control">
       <label>Email</label>
       <input type="text" placeholder="Email" formControlName="email">
-      <div class="validation"></div>
+      <div *ngIf="form.get('email').invalid && form.get('email').touched" class="validation">
+        <small *ngIf="form.get('email').errors.required">
+          Field email can't be empty
+        </small>
+        <small *ngIf="form.get('email').errors.email">
+          Please write real email with @ symbol
+        </small>
+      </div>
     </div>
 
     <div class="form-control">
       <label>Password</label>
       <input type="password" placeholder="Password" formControlName="password">
       <div class="validation"></div>
+      <small *ngIf="form.get('password').errors.required">Password can't be empty</small>
+      <small *ngIf="form.get('password').errors.minlength">
+        Actual password length for now:
+        {{form.get('password').errors.minlength.actualLength}}
+      </small>
     </div>
 
     <div class="card">
       <h2>Address</h2>
-
       <div class="form-control">
         <label>Country</label>
-
         <select>
           <option value="ua">Ukraine</option>
           <option value="us">USA</option>
@@ -30,7 +40,6 @@
       <div class="form-control">
         <input type="text">
       </div>
-
       <button class="btn" type="button">Choose capital city</button>
     </div>
 
@@ -42,7 +51,6 @@
         <input type="text">
       </div>
     </div>
-
     <button class="btn" type="submit" [disabled]="form.invalid">Send</button>
   </form>
 </div>
