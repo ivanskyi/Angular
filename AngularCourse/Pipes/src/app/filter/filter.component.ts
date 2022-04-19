@@ -16,7 +16,13 @@ export class FilterComponent {
   search = ''
 
   posts: Post[] = [
-    { title: 'Beer', text: 'The best beer' },
-    { title: 'Bread', text: 'The best bread' }
+    { title: 'Beer', text: 'The best beer.' },
+    { title: 'Bread', text: 'The best bread.' }
   ]
+
+  addPost() {
+    this.posts.unshift({
+      title: 'Ice cream', text: 'The best ice cream.'
+    })
+  }
 }
