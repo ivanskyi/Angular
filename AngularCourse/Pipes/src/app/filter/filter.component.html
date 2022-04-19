@@ -1,0 +1,8 @@
+<div class="container">
+    <h1>Search</h1>
+    <input type="text" [(ngModel)]="search">
+    <div *ngFor="let post of posts | filter:search" class="card">
+        <h2>{{post.title}}</h2>
+        <p>{{post.title}}</p>
+    </div>
+</div>
