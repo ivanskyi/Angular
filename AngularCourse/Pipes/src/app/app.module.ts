@@ -7,6 +7,7 @@ import { MarksPipe } from './pipes/marks.pipe';
 import { FilterComponent } from './filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { FilterPipe } from './pipes/filter.pipe';
+import { AsynchronousComponent } from './asynchronous/asynchronous.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     MultByPipe,
     MarksPipe,
     FilterComponent,
-    FilterPipe
+    FilterPipe,
+    AsynchronousComponent
   ],
   imports: [
     BrowserModule,
