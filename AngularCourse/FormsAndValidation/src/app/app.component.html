@@ -42,12 +42,12 @@
         <button class="btn" type="button" (click)="setCapital()">Choose capital city</button>
       </div>
     </div>
-    <div class="card">
+    <div class="card" formGroupName="skills">
       <h2>Your skills</h2>
-      <button class="btn" type="button">Add skill</button>
-      <div class="form-control">
-        <label></label>
-        <input type="text">
+      <button class="btn" type="button" (click)="addSkill()">Add skill</button>
+      <div class="form-control" *ngFor="let control of form.get('skills').controls; let idx = index">
+        <label>Skill № {{idx + 1}} </label>
+        <input type="text" [formControlName]="idx">
       </div>
     </div>
     <button class="btn" type="submit" [disabled]="form.invalid">Send</button>
